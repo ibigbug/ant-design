@@ -204,29 +204,102 @@ Modal 对话框 - Ant Design
     <h1>
       Modal 对话框
     </h1>
-    <h2 id="何时使用">何时使用</h2><p>当你再次和我说起 青春时的故事
-我正在下着雨的无锡 乞讨着生活的权利
-前一天早晨 我睁开眼已是江南
-他们说柔软的地方 总会发生柔软的事
-那年的舞台上 说谎的人一直歌唱
-大不列颠的广场上 有没有鸽子飞翔
-青春和瞎子一起 变成了哑巴
-今天扯平了我们的当年 分食了理想</p>
-<h2 id="为什么使用">为什么使用</h2><p>你可知道你的名字解释了我的一生
-碎了满天的往事如烟 与世无争
-当你装满行李 回到故乡
-我的余生 却再也没有北方</p>
-<p>有一天我又梦见 那个装满乐器的教室
-你还站在门口 一脸羞涩的表情
-你说这么多年你还没找到 让你心动的男人
-我说去他妈的爱情 都是过眼云烟的东西</p>
-<p>我的余生 都用来寻找北方</p>
+    <h2 id="api">api</h2><p>是个方法，参数只有一个 object ，具体成员如下</p>
+<table>
+<thead>
+<tr>
+<th>成员</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>title</td>
+<td>日期</td>
+<td>React.Element</td>
+<td>无</td>
+</tr>
+<tr>
+<td>content</td>
+<td>面板内容</td>
+<td>React.Element</td>
+<td>无</td>
+</tr>
+<tr>
+<td>onOk</td>
+<td>确定回调</td>
+<td>function</td>
+<td>无</td>
+</tr>
+<tr>
+<td>onCancel</td>
+<td>取消回调</td>
+<td>function</td>
+<td>无</td>
+</tr>
+<tr>
+<td>width</td>
+<td>宽度</td>
+<td>String</td>
+<td>Number</td>
+<td>无</td>
+</tr>
+</tbody>
+</table>
 <h2 class="component-demos">
   组件演示
   <i class="iconfont-home icon-all" title="展开全部代码"></i>
 </h2>
 <div class="code-boxes clearfix">
-  <div class="code-boxes-col">
+  <div class="code-boxes-col"><div class="code-box">
+  <div class="code-box-demo">
+    <div id="components-modal-demo-basic"></div>
+    <script>var modal = antd.modal;
+
+function show(){
+  modal({
+    width:500,
+    title:'第一个 modal',
+    content: React.createElement("p", null, "modal content"),
+    onCancel:function(){
+      alert('cancel');
+    },
+    onOk:function(){
+      alert('ok')
+    }
+  });
+}
+
+React.render(
+  React.createElement("button", {onClick: show}, "show modal")
+, document.getElementById('components-modal-demo-basic'));</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> modal = antd.modal;
+
+<span class="function"><span class="keyword">function</span> <span class="title">show</span><span class="params">()</span>{</span>
+  modal({
+    width:<span class="number">500</span>,
+    title:<span class="string">'第一个 modal'</span>,
+    content: <span class="xml"><span class="tag">&lt;<span class="title">p</span>&gt;</span>modal content<span class="tag">&lt;/<span class="title">p</span>&gt;</span>,
+    onCancel:function(){
+      alert('cancel');
+    },
+    onOk:function(){
+      alert('ok')
+    }
+  });
+}
+
+React.render(
+  <span class="tag">&lt;<span class="title">button</span> <span class="attribute">onClick</span>=<span class="value">{show}</span>&gt;</span>show modal<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+, document.getElementById('components-modal-demo-basic'));</span></code></pre></div>
+  </div>
+  <div class="code-box-meta">
+    <div class="code-box-title">基本</div>
+    <p>使用很简单</p>
+    <span class="collapse iconfont-home icon-chevron"></span>
+  </div>
+</div>
   </div>
   <div class="code-boxes-col">
   </div>

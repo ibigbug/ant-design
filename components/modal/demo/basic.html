@@ -1,0 +1,47 @@
+<div class="code-box">
+  <div class="code-box-demo">
+    <div id="components-modal-demo-basic"></div>
+    <script>var modal = antd.modal;
+
+function show(){
+  modal({
+    width:500,
+    title:'第一个 modal',
+    content: React.createElement("p", null, "modal content"),
+    onCancel:function(){
+      alert('cancel');
+    },
+    onOk:function(){
+      alert('ok')
+    }
+  });
+}
+
+React.render(
+  React.createElement("button", {onClick: show}, "show modal")
+, document.getElementById('components-modal-demo-basic'));</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> modal = antd.modal;
+
+<span class="function"><span class="keyword">function</span> <span class="title">show</span><span class="params">()</span>{</span>
+  modal({
+    width:<span class="number">500</span>,
+    title:<span class="string">'第一个 modal'</span>,
+    content: <span class="xml"><span class="tag">&lt;<span class="title">p</span>&gt;</span>modal content<span class="tag">&lt;/<span class="title">p</span>&gt;</span>,
+    onCancel:function(){
+      alert('cancel');
+    },
+    onOk:function(){
+      alert('ok')
+    }
+  });
+}
+
+React.render(
+  <span class="tag">&lt;<span class="title">button</span> <span class="attribute">onClick</span>=<span class="value">{show}</span>&gt;</span>show modal<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+, document.getElementById('components-modal-demo-basic'));</span></code></pre></div>
+  </div>
+  <div class="code-box-meta">
+    <div class="code-box-title">基本</div>
+    <p>使用很简单</p>
+    <span class="collapse iconfont-home icon-chevron"></span>
+  </div>
+</div>
