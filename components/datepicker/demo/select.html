@@ -1,0 +1,37 @@
+<div class="code-box">
+  <div class="code-box-demo">
+    <div id="components-datepicker-demo-select"></div>
+    <script>var Datepicker = antd.datepicker;
+
+var Picker = React.createClass({displayName: "Picker",
+  handleChange: function(value) {
+    console.log(new Date(value.getTime()));
+  },
+  render: function() {
+    return React.createElement(Datepicker, {onSelect: this.handleChange})
+  }
+});
+
+React.render(
+  React.createElement(Picker, null)
+, document.getElementById('components-datepicker-demo-select'));</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> Datepicker = antd.datepicker;
+
+<span class="keyword">var</span> Picker = React.createClass({
+  handleChange: <span class="function"><span class="keyword">function</span><span class="params">(value)</span> {</span>
+    console.log(<span class="keyword">new</span> Date(value.getTime()));
+  },
+  render: <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
+    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">Datepicker</span> <span class="attribute">onSelect</span>=<span class="value">{this.handleChange}</span> /&gt;</span>
+  }
+});
+
+React.render(
+  <span class="tag">&lt;<span class="title">Picker</span> /&gt;</span>
+, document.getElementById('components-datepicker-demo-select'));</span></code></pre></div>
+  </div>
+  <div class="code-box-meta">
+    <div class="code-box-title">选择日期</div>
+    <p>通过设置选择日期的回调事件 <code>onSelect</code>，完成交互行为。</p>
+    <span class="collapse iconfont-home icon-chevron"></span>
+  </div>
+</div>
