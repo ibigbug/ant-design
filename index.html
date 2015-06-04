@@ -20,7 +20,7 @@ Ant Design - 下一代设计&前端框架
   <script src="https://t.alipayobjects.com/images/T12TdfXlpbXXXXXXXX.js"></script>
   <script src="/static/script.js"></script>
 </head>
-<body style="background: #fff;">
+<body>
   <header id="header">
     <a class="logo" href="/">
       <img width="60" src="https://t.alipayobjects.com/images/rmsweb/T1B9hfXcdvXXXXXXXX.svg">
@@ -58,29 +58,41 @@ Ant Design - 下一代设计&前端框架
         </li>
       </ul>
     </nav>
-    <div class="nav-phone-icon"></div>
   </header>
-  <!-- 首页 -->
-  <div class="main">
-    <div class="main-box" id="main">
-      <div class="banner-box">
-        <div id="bannerAnim"></div>
-        <div class="banner-img fn-alpha-out"></div>
-        <div class="banner-entry fn-hide">
-            <div class="entry-title">Ant</div>
-            <div class="entry-title">Design</div>
-            <div class="entry-slogan">
-              下一代设计&前端框架
-            </div>
-            <a class="entry-link" href="/docs/start">
-              <i class="iconfont-home icon-lego"></i>
-              开始使用
-            </a>
+  <div class="main-wrapper">
+    
+ 
+<div class="main-box" id="main">
+  <div class="banner-box">
+    <div id="bannerAnim"></div>
+    <div class="banner-img fn-alpha-out"></div>
+    <div class="banner-entry fn-hide">
+        <div class="entry-title">Ant</div>
+        <div class="entry-title">Design</div>
+        <div class="entry-slogan">
+          下一代设计&前端框架
         </div>
-      </div>
+        <a class="entry-link" href="/docs/start">
+          <i class="iconfont-home icon-lego"></i>
+          开始使用
+        </a>
     </div>
   </div>
-  <script src="/static/homeLoad.js"></script><footer id="footer">
+</div>
+<script src="/static/homeLoad.js"></script>
+<style>
+.main-wrapper {
+  overflow: hidden;
+  position: relative;
+  height: calc(100% - 190px);
+  min-height: 500px;
+  background: #fff;
+  transform-style: preserve-3d;
+  transition: transform .6s cubic-bezier(0.785, 0.135, 0.15, 0.86), height .5s ease-out;
+}
+</style>
+
+  </div><footer id="footer">
   <ul>
     <li>
       <h2>GitHub</h2>
