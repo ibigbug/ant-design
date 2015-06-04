@@ -12,7 +12,6 @@ module.exports = function (props) {
   props = props || {};
 
   props.animation = 'zoom';
-
   props.maskAnimation = 'fade';
 
   props.onClose = props.onCancel || noop;
