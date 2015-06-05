@@ -3,40 +3,38 @@
     <div id="components-modal-demo-basic"></div>
     <script>var modal = antd.modal;
 
-function show(){
+function show() {
   modal({
-    width:500,
-    title:'第一个 modal',
-    content: React.createElement("p", null, "modal content"),
-    onCancel:function(){
+    title: '第一个 Modal',
+    content: React.createElement("p", null, "Modal content"),
+    onCancel: function() {
       alert('cancel');
     },
-    onOk:function(){
-      alert('ok')
+    onOk: function() {
+      alert('ok');
     }
   });
 }
 
 React.render(
-  React.createElement("button", {onClick: show}, "show modal")
+  React.createElement("button", {onClick: show}, "显示对话框")
 , document.getElementById('components-modal-demo-basic'));</script><div class="highlight"><pre><code class="javascript"><span class="keyword">var</span> modal = antd.modal;
 
-<span class="function"><span class="keyword">function</span> <span class="title">show</span><span class="params">()</span>{</span>
+<span class="function"><span class="keyword">function</span> <span class="title">show</span><span class="params">()</span> {</span>
   modal({
-    width:<span class="number">500</span>,
-    title:<span class="string">'第一个 modal'</span>,
-    content: <span class="xml"><span class="tag">&lt;<span class="title">p</span>&gt;</span>modal content<span class="tag">&lt;/<span class="title">p</span>&gt;</span>,
-    onCancel:function(){
+    title: <span class="string">'第一个 Modal'</span>,
+    content: <span class="xml"><span class="tag">&lt;<span class="title">p</span>&gt;</span>Modal content<span class="tag">&lt;/<span class="title">p</span>&gt;</span>,
+    onCancel: function() {
       alert('cancel');
     },
-    onOk:function(){
-      alert('ok')
+    onOk: function() {
+      alert('ok');
     }
   });
 }
 
 React.render(
-  <span class="tag">&lt;<span class="title">button</span> <span class="attribute">onClick</span>=<span class="value">{show}</span>&gt;</span>show modal<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">button</span> <span class="attribute">onClick</span>=<span class="value">{show}</span>&gt;</span>显示对话框<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
 , document.getElementById('components-modal-demo-basic'));</span></code></pre></div>
   </div>
   <div class="code-box-meta">
