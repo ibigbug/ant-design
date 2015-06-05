@@ -1,8 +1,11 @@
 var webpack = require('webpack');
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var path = require('path');
 
 module.exports = {
-  entry: './index.js',
+  entry: {
+    antd: './index.js'
+  },
 
   resolve: {
     extensions: ['', '.js', '.jsx'],
@@ -10,7 +13,7 @@ module.exports = {
 
   output: {
     path: path.join(process.cwd(), 'dist'),
-    filename: 'index.js'
+    filename: '[name].js'
   },
 
   externals: {
@@ -21,10 +24,14 @@ module.exports = {
     loaders: [
       {test: /\.jsx?$/, loader: 'babel'},
       {test: /\.json$/, loader: 'json-loader'},
-      {test: /\.less$/, loader: "style!css!less"},
-      {test: /\.css/, loader: 'style!css'}
+      {test: /\.less$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader!less-loader")},
+      {test: /\.css/, loader: ExtractTextPlugin.extract("style-loader", "css-loader")}
     ]
   },
+
+  plugins: [
+    new ExtractTextPlugin("[name].css")
+  ],
 
   devtool: "#source-map"
 };
